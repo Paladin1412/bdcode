@@ -1,2 +1,2 @@
 # bdcode
-my code in bd
+collect code i wrote in bd.
