@@ -1,0 +1,62 @@
+{"word":"かなたは","freq":"1","index":0,"keys":"かなたは","source":"system","reading":"かなたは"}
+{"word":"ラやな","freq":"1","index":1,"keys":"らやな","source":"system","reading":"らやな"}
+{"records":[{"word":"皿","freq":"1","index":0,"keys":"さら","source":"manual","reading":"さら"},{"word":"たま","freq":"1","index":1,"keys":"たま","source":"system","reading":"たま"},{"word":"金谷","freq":"1","index":0,"keys":"かなや","source":"manual","reading":"かなや"}],"devicetype":"Simulator","device":"iOS 9.1","version":"4.5"}
+{"records":[{"word":"あち","freq":"1","index":0,"keys":"あち","source":"system","reading":"あち"},{"word":"花奈","freq":"1","index":2,"keys":"かな","source":"strategy","reading":"かな"},{"word":"差浜","freq":"1","index":1,"keys":"さはま","source":"system","reading":"さはま"}],"devicetype":"Simulator","device":"iOS 9.1","version":"4.5"}
+{"records":[{"word":"アタマや","freq":"1","index":1,"keys":"あたまや","source":"system","reading":"あたまや"},{"word":"花奈","freq":"1","index":1,"keys":"かな","source":"learn","reading":"かな"},{"word":"砂原","freq":"1","index":2,"keys":"さはら","source":"system","reading":"さはら"},{"word":"さん","freq":"1","index":1,"keys":"","source":"system","reading":"さん"},{"word":"から","freq":"1","index":4,"keys":"","source":"system","reading":"から"},{"word":"電話","freq":"1","index":0,"keys":"","source":"strategy","reading":"でんわ"},{"word":"が","freq":"1","index":4,"keys":"","source":"system","reading":"が"},{"word":"できます","freq":"1","index":4,"keys":"","source":"system","reading":"できます"}],"devicetype":"Simulator","device":"iOS 9.1","version":"4.5"}
+{"records":[{"word":"あたま","freq":"1","index":3,"keys":"あたま","source":"system","reading":"あたま"},{"word":"の","freq":"1","index":0,"keys":"","source":"system","reading":"の"},{"word":"こと","freq":"1","index":0,"keys":"","source":"strategy","reading":"こと"},{"word":"が","freq":"1","index":1,"keys":"","source":"system","reading":"が"},{"word":"できません","freq":"1","index":9,"keys":"","source":"system","reading":"できません"},{"word":"でした","freq":"1","index":1,"keys":"","source":"system","reading":"でした"}],"devicetype":"Simulator","device":"iOS 9.1","version":"4.5"}
+{"word":"傘","freq":"1","index":0,"keys":"かさ","source":"system","reading":"かさ"}
+{"word":"悩み","freq":"1","index":0,"keys":"なや","source":"system","reading":"なやみ"}
+{"word":"悩ん","freq":"1","index":0,"keys":"なやん","source":"system","reading":"なやん"}
+{"word":"でください","freq":"1","index":4,"keys":"","source":"system","reading":"でください"}									
+{"word":"間や","freq":"1","index":0,"keys":"まや","source":"system","reading":"まや"}
+{"word":"棚","freq":"1","index":0,"keys":"たな","source":"system","reading":"たな"}
+{"word":"赤","freq":"1","index":0,"keys":"あか","source":"learn","reading":"あか"}									
+{"word":"さかなは","freq":"1","index":0,"keys":"さか","source":"learn","reading":"さかなは"}
+
+
+
+
+
+
+
+
+
+
+{"word":"花","freq":"1","index":0,"keys":"はな","source":"system","reading":"はな"}
+{"word":"らや","freq":"1","index":0,"keys":"らや","source":"system","reading":"らや"}
+{"word":"方","freq":"1","index":0,"source":"system","reading":"かた"}
+{"word":"砂原","freq":"1","index":0,"keys":"さは","source":"learn","reading":"さはら"}
+{"word":"山口","freq":"1","index":1,"source":"manual","reading":"やまぐち"}
+{"word":"アタマ","freq":"1","index":0,"keys":"あた","source":"learn","reading":"あたま"}
+{"word":"花奈","freq":"1","index":0,"keys":"かな","source":"learn","reading":"かな"}
+{"word":"さは","freq":"1","index":1,"source":"learn","reading":"さは"}
+{"word":"ない","freq":"1","index":6,"source":"system","reading":"ない"}
+{"word":"と思う","freq":"1","index":1,"source":"strategy","reading":"とおもう"}
+
+
+
+
+
+
+
+
+
+
+{"word":"より","freq":"1","index":2,"source":"system","reading":"より"}
+{"word":"全然","freq":"1","index":1,"source":"strategy","reading":"ぜんぜん"}
+{"word":"いいよ","freq":"1","index":0,"source":"strategy","reading":"いいよ"}
+{"word":"別に","freq":"1","index":1,"source":"strategy","reading":"べつに"}
+{"word":"いいけど","freq":"1","index":0,"source":"strategy","reading":"いいけど"}
+{"word":"なんか","freq":"1","index":0,"source":"strategy","reading":"なんか"}
+{"word":"アタマ","freq":"1","index":0,"source":"learn","reading":"あたま"}
+{"word":"花奈","freq":"1","index":0,"source":"learn","reading":"かな"}
+{"word":"なあ","freq":"1","index":0,"source":"system","reading":"なあ"}
+{"word":"に","freq":"1","index":1,"source":"system","reading":"に"}
+{"word":"人数","freq":"1","index":1,"source":"strategy","reading":"にんずう"}
+{"word":"を","freq":"1","index":2,"source":"system","reading":"を"}
+{"word":"あたま","freq":"1","index":1,"source":"learn","reading":"あたま"}
+{"word":"あたま","freq":"1","index":1,"source":"learn","reading":"あたま"}
+{"word":"あたま","freq":"1","index":1,"keys":"","source":"learn","reading":"あたま"}
+{"word":"を","freq":"1","index":1,"keys":"","source":"system","reading":"を"}
+{"word":"を","freq":"1","index":1,"keys":"","source":"system","reading":"を"}
+{"word":"を","freq":"1","index":1,"keys":"","source":"system","reading":"を"}

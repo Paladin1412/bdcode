@@ -1,0 +1,32 @@
+{"word":"testtest"}
+{"source":"system","input":"\u306c\u304a\u305f","reading":"\u306c\u304a\u305f","word":"\u306c\u304a\u305f","system_version":"9.2","app_version":"5.1","uid":"69DAC81E-66CC-4B2C-A4C6-6E08CEA75EAB"}
+{"word":"testtest"}
+{"source":"system","input":"\u306a\u304b\u305f\u307e","reading":"\u306a\u304b\u305f\u307e","word":"\u4e2d\u7389","system_version":"9.2","app_version":"5.1","uid":"69DAC81E-66CC-4B2C-A4C6-6E08CEA75EAB"}
+{"source":"system","input":"\u306a\u304b\u305f\u307e\u3061\u3044","reading":"\u306a\u304b\u305f\u307e\u3061\u3044","word":"\u4e2d\u7389\u5730\u4f4d","system_version":"9.2","app_version":"5.1","uid":"69DAC81E-66CC-4B2C-A4C6-6E08CEA75EAB"}
+{"source":"system","input":"\u306a\u3042\u305f\u306a","reading":"\u306a\u3042\u305f\u306a","word":"\u306a\u3042\u68da","system_version":"9.2","app_version":"5.1","uid":"69DAC81E-66CC-4B2C-A4C6-6E08CEA75EAB"}
+{"source":"system","input":"\u3084\u306a\u305f","reading":"\u3084\u306a\u305f","word":"\u6881\u7530","system_version":"9.2","app_version":"5.1","uid":"69DAC81E-66CC-4B2C-A4C6-6E08CEA75EAB"}
+{"source":"system","input":"\u307e\u305f\u3086","reading":"\u307e\u305f\u3086","word":"\u307e\u305f\u6e6f","system_version":"9.2","app_version":"5.1","uid":"69DAC81E-66CC-4B2C-A4C6-6E08CEA75EAB"}
+{"source":"system","input":"\u3064\u304a\u306b","reading":"\u3064\u3044\u306b","word":"\u3064\u3044\u306b","system_version":"9.2","app_version":"5.1","uid":"69DAC81E-66CC-4B2C-A4C6-6E08CEA75EAB"}
+{"source":"learn","input":"\u308b\u306f","reading":"\u308b\u306f\u3093","system_version":"9.2","app_version":"5.1","word":"\u9e7f\u6657"}
+{"source":"system","input":"\u3042\u305f","reading":"\u3042\u305f\u3048\u308b","word":"\u4e0e\u3048\u308b","platform":"iOS","system_version":"8.3","app_version":"5.1"}
+{"source":"system","input":"\u3042\u305f\u3084","reading":"\u3042\u305f\u3084","word":"\u5f53\u305f\u3084","platform":"iOS","system_version":"8.3","app_version":"5.1"}
+{"source":"system","input":"\u306f\u3089","reading":"\u306f\u3089\u3046","word":"\u6255\u3046","platform":"iOS","system_version":"8.3","app_version":"5.1"}
+{"source":"strategy","input":"\u304b\u306a","reading":"\u304b\u306a","word":"\u82b1\u5948","platform":"iOS","system_version":"8.3","app_version":"5.1"}
+{"source":"learn","input":"w","reading":"w","word":"whatever","platform":"iOS","system_version":"8.3","app_version":"5.1"}
+{"source":"learn","input":"\u308b\u306f\u3093","reading":"\u308b\u306f\u3093","word":"\u9e7f\u6657","platform":"iOS","system_version":"8.3","app_version":"5.1"}
+{"source":"strategy","input":"\u304b\u308f","reading":"\u304b\u308f","word":"( \u2022\u0324\u1d17\u2022\u0324 )","platform":"iOS","system_version":"8.3","app_version":"5.1"}
+{"source":"learn","input":"\u304b\u308f","reading":"\u304b\u308f","word":"( \u2022\u0324\u1d17\u2022\u0324 )","platform":"iOS","system_version":"8.3","app_version":"5.1"}
+{"source":"english","input":"34@","reading":"34@yahoo.co.jp","word":"34@yahoo.co.jp","platform":"iOS","system_version":"8.3","app_version":"5.1"}
+{"source":"learn","input":"ww","reading":"ww","word":"www.yahoo.co.jp","platform":"iOS","system_version":"8.3","app_version":"5.1"}
+{"source":"strategy","input":"}#<<","reading":"}#<<","word":"}#<<","platform":"iOS","system_version":"8.3","app_version":"5.1"}
+{"source":"strategy","input":"}#<<","reading":"}#<<","word":"\uff5d\uff03\uff1c\uff1c","platform":"iOS","system_version":"8.3","app_version":"5.1"}
+{"source":"learn","input":"\u308b\u306f\u3093","reading":"\u308b\u306f\u3093","word":"\u9e7f\u6657","platform":"iOS","system_version":"9.0","app_version":"5.1"}
+{"source":"english","input":"%;\"ftgf","reading":"%;\"ftgf","word":"%;\"FTGF","platform":"iOS","system_version":"8.3","app_version":"5.1"}
+{"source":"english","input":"r\u3063f\u3063g","reading":"rffgg","word":"Rffgg","platform":"iOS","system_version":"8.3","app_version":"5.1"}
+{"source":"system","input":"\u304b\u3084\u306a\u3084","reading":"\u304b\u3084\u306a\u3084","word":"\u868a\u5e33\u306a\u3084","platform":"iOS","system_version":"8.3","app_version":"5.1"}
+{"source":"system","input":"\u3042\u304b\u3055\u305f\u306a\u306f","reading":"\u3042\u304b\u3055\u305f\u306a\u306f\u307e\u3084\u3089\u308f\u3092\u3093","word":"\u30a2\u30ab\u30b5\u30bf\u30ca\u30cf\u30de\u30e4\u30e9\u30ef\u30f2\u30f3","platform":"iOS","system_version":"8.3","app_version":"5.1"}
+{"source":"system","input":"\u304b\u3055\u304b\u3084","reading":"\u304b\u3055\u304b\u3084","word":"\u7b20\u5316\u3084","platform":"iOS","system_version":"8.3","app_version":"5.1"}
+{"source":"strategy","input":"\u306f\u3089\u3084","reading":"\u306f\u3089\u3084","word":"\uff16\uff19\uff18","platform":"iOS","system_version":"8.3","app_version":"5.1"}
+{"source":"english","input":"\u304akj","reading":"okj","word":"\uff4f\uff4b\uff4a","platform":"iOS","system_version":"8.3","app_version":"5.1"}
+{"source":"english","input":"jdk","reading":"jdk","word":"\uff2a\uff44\uff4b","platform":"iOS","system_version":"8.3","app_version":"5.1"}
+{"source":"system","input":"\u3051\u307b\u306d\u3086","reading":"\u3051\u307b\u306d\u3086","word":"\u6bdb\u9aa8\u3086","platform":"iOS","system_version":"8.3","app_version":"5.1"}

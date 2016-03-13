@@ -1,0 +1,108 @@
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>测试工具</title>
+    <script type="text/javascript" src="/static/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="/static/js/jquery-ui"></script>
+    <link   href="/static/css/bootstrap-combined.min.css" rel="stylesheet" media="screen">
+    <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    var xmlHttp;
+    function createxmlHttpRequest()
+    {
+        if(window.ActiveXObject)
+            xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+        else if(window.XMLHttpRequest)
+            xmlHttp = new XMLHttpRequest();
+    }
+    function doRequestUsingGet()
+    {
+        createxmlHttpRequest();
+        var base_url = 'http://jp01-global-op01.jp01.baidu.com:8888/reportLog';
+        var ip = document.getElementById('inputIP').value;
+        var log_path = document.getElementById('inputLogPath').value;
+        var new_url = base_url+"?ip="+ip+"&log_path="+log_path;
+        var responseDiv = document.getElementsByName("show")[0];
+        responseDiv.innerHTML="loading......";
+        xmlHttp.open("GET",new_url);
+        xmlHttp.onreadystatechange = handleStateChange;
+        xmlHttp.send(null);
+    }
+    function handleStateChange()
+    {
+        var responseDiv = document.getElementsByName("show")[0];
+        if(xmlHttp.readyState==4 && xmlHttp.status == 200)
+        {
+            //var responseDiv = document.getElementsByName("main")[0];
+            responseDiv.innerHTML=xmlHttp.responseText;
+        }
+        //alert(xmlHttp.responseText)  
+    }
+    function sumbit()
+    {
+        var base_url = 'http://jp01-global-op01.jp01.baidu.com:8888/reportLog';
+        var ip = document.getElementById('inputIP');
+        var log_path = document.getElementById('inputLogPath');
+        
+    }
+    </script>
+</head>
+<body>
+<div class="navbar navbar-inverse">
+    <div class="navbar-inner">
+        <div class="container-fluid"><a class="btn btn-navbar" data-target=".navbar-responsive-collapse" data-toggle="collapse"> </a> <a class="brand" contenteditable="true" href="#">测试工具</a>
+
+        <div class="nav-collapse collapse navbar-responsive-collapse">
+            <ul class="nav" contenteditable="false">
+                <li class="active"><a href="http://jp01-global-op01.jp01.baidu.com:8888/">UU日志实时查询</a></li>
+                <li><a href="#">上报日志查询</a></li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">代码覆盖率</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" onclick="codeCover('simeji-skin')">simeji-skin</a></li>
+                        <li><a href="#">simeji-smallapp</a></li>
+                        <li><a href="#">simeji-nlpranking</a></li>
+                        <li><a href="#">simeji-passport</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span12">
+            <form class="form-horizontal">
+                <div class="control-group">
+                    <label class="control-label" for="inputIP">机器列表</label>
+                    <div class="controls">
+                        <input class="form-control" id="inputIP" type="text" placeholder="机器IP或者地址"/>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="inputLogPath">日志路径</label>
+                    <div class="controls">
+                        <input class="form-control" id="inputLogPath" type="text" placeholder="日志的完整路径，包括文件名字"/>
+                    </div>
+                </div>
+            </form>
+                <div class="form-horizontal">
+                    <div class="controls">
+                        <button class="btn" onclick="doRequestUsingGet()">查询</button>
+                    </div>
+                </div>
+            <p class="text-center">
+                ---------------日志查询结果展示-----------------
+            </p>
+            <div class="form-horizontal" name='sss'>
+                <div class="controls" name='show'>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

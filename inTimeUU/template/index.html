@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <title>测试工具</title>
+    <script type="text/javascript" src="/static/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="/static/js/jquery-ui"></script>
+    <link href="/static/css/bootstrap-combined.min.css" rel="stylesheet" media="screen">
+    <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>  
+    <script type="text/javascript" src="/static/jquery-latest.js"></script>
+    <script type="text/javascript" src="/static/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript">
+       $(document).ready(function(){ 
+            $("#myTable").tablesorter({widgets: ['zebra']}); 
+            } 
+        ); 
+        var xmlHttp;
+        function createxmlHttpRequest()
+        {
+            if(window.ActiveXObject)
+                xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+            else if(window.XMLHttpRequest)
+                xmlHttp = new XMLHttpRequest();
+        }
+        function finduu()
+        {
+            createxmlHttpRequest();
+            var uuid = document.getElementsByName("uuid")[0].value;
+            document.getElementsByName("uuResult")[0].innerHTML = '查询中...';
+            var targetURL = "http://jp01-global-op01.jp01.baidu.com:8888/findUU?uuid="+uuid;
+            xmlHttp.open("GET", targetURL);
+            xmlHttp.onreadystatechange = displayUU;
+            xmlHttp.send(null);
+        }
+        function displayUU()
+        {
+            if (xmlHttp.readyState==4 && xmlHttp.status==200)
+            {
+                var displayDIV = document.getElementsByName("uuResult")[0];
+                displayDIV.innerHTML = "查询结果："+xmlHttp.responseText;
+            }
+        }
+        function doRequestUsingGet()
+        {
+            createxmlHttpRequest();
+            var queryString = "http://jp01-build64.jp01.baidu.com:8990/trace";
+            xmlHttp.open("GET",queryString);
+            xmlHttp.onreadystatechange = handleStateChange;
+            xmlHttp.send(null);
+        }
+        function handleStateChange()
+        {
+            var html = "";
+            var responseDiv = document.getElementsByName("main")[0];
+            if(xmlHttp.readyState==4 && xmlHttp.status == 200)
+            {
+                //var responseDiv = document.getElementsByName("main")[0];
+                responseDiv.innerHTML=xmlHttp.responseText;
+            }
+            html+=xmlHttp.responseText;
+            //xmlHttp.responseText;
+            
+        }
+        var build_url="http://newns.jenkins.baidu.com/view/All/job/str-master/build?delay=0sec";
+        function codeCover(project){
+            var new_url = build_url.replace("str",project);
+            //alert(new_url);
+            window.open(new_url,"_blank");
+            var url2="http://jp01-build64.jp01.baidu.com:8990/trace?project="+project;
+            window.location.href=url2;
+            //var html=window.location.assign(url2);
+            //alert(url2);
+            //doRequestUsingGet();
+            //var main_body = document.getElementsByName("main")[0];
+            //$("#main").load(url2);
+            //$("#main").load(url2);
+            //main_body.innerHTML=html;
+        }
+    </script>
+</head>
+<body>
+<div class="navbar navbar-inverse">
+<div class="navbar-inner">
+<div class="container-fluid"><a class="btn btn-navbar" data-target=".navbar-responsive-collapse" data-toggle="collapse"> </a> <a class="brand" contenteditable="true" href="#">测试工具</a>
+
+<div class="nav-collapse collapse navbar-responsive-collapse">
+<ul class="nav" contenteditable="false">
+    <li class="active"><a href="http://jp01-global-op01.jp01.baidu.com:8888/">UU日志实时查询</a></li>
+    <li><a href="http://jp01-global-op01.jp01.baidu.com:8888/log">上报日志查询</a></li>
+    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">代码覆盖率</a>
+    <ul class="dropdown-menu">
+        <li><a href="#" onclick="codeCover('simeji-skin')">simeji-skin</a></li>
+        <li><a href="#" onclick="codeCover('simeji-smallapp')">simeji-smallapp</a></li>
+        <li><a href="#" onclick="codeCover('simeji-ranking')">simeji-nlpranking</a></li>
+        <li><a href="#">simeji-passport</a></li>
+    </ul>
+    </li>
+</ul>
+
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="container-fluid" id="main">
+    <div class="row-fluid">
+        <div class="span12">
+            <div class="page-header">
+                <h1>
+                 Android实时UU数据展示<small>上次更新时间: {{ str_time }}</small>
+                    &nbsp &nbsp &nbsp
+                    <input class="form-control" name="uuid" placeholder="输入UUID"></input>
+                    <button class="btn" onclick="finduu()" >查询</button>
+                    &nbsp &nbsp 
+                    <small name='uuResult'></small> 
+                </h1>
+            </div>
+<table  class="table table-bordered table-hover" id="myTable">
+<thead> 
+<tr class="info"> 
+    <th>app_ver</th> 
+    {% for os_ver in os_ver_list %}
+        <th>OS: {{ os_ver }}</th> 
+    {% end %}
+    <th>all count</th>
+</tr> 
+</thead> 
+<tbody> 
+
+    {% for key in app_ver_dict %} 
+        <tr >
+        <td >{{ key }}</td>
+        {% for os in os_ver_list %}
+            {% if app_ver_dict[key].has_key(os) %}
+                <td >{{ app_ver_dict[key][os] }}</td> 
+            {% else %}
+                <td></td> 
+            {%end%}
+            {% end % }
+        {% end %}
+        <td>{{ app_ver_dict[key]['count']}}</td>
+        </tr>
+    {% end %}
+  
+</tbody> 
+</table> 
+</div>
+</div>
+</div>
+
+</body>
+</html>
