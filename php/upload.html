@@ -1,0 +1,38 @@
+<html>       
+<head>       
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">       
+<title>用户自定义皮肤上传</title>       
+<script>       
+function viewmypic(mypic,imgfile) {        
+    if (imgfile.value){        
+        mypic.src=imgfile.value;        
+        mypic.style.display="";        
+        mypic.border=1;        
+    }        
+}        
+</script>       
+</head>       
+<body>       
+       
+<form enctype="multipart/form-data" method='post' action='http://cp01-rdqa-dev137.cp01.baidu.com:8000/upload/receive'>
+<input name="app_version" type="text"  size="20" value='3.2' />  
+<br />     
+<input name="system_version" type="text"  size="20" value='8.4' /> 
+<br />
+<input name="title" type="text"  size="20" value='title' />
+<br />
+<input name="token" type="text"  size="20" value='token' /> 
+<br />    
+<input name="imgfile" type="file" id="imgfile" size="40" />
+<br />
+<input type="submit" value="上传" />       
+<br />       
+</form>       
+<img name="showimg" id="showimg" src="" style="display:none;" alt="预览图片" />       
+<br />       
+</div>       
+<div style="display:none">       
+</div>       
+    
+</body>       
+</html>
