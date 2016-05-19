@@ -16,12 +16,41 @@ class DiffXML extends BaseDiff{
      * @params xml file $xmlFileRight
      * @return none
      **/
-    public function DIffXML($xmlFileLeft, $xmlFileRight){
+    public function DIffXML($xmlFileLeft, $xmlFileRight, $outFile, $encoding){
+        
+        $this->_outFile   = $outFile;
+        $this->_encoding  = $encoding;
+        $this->_nameLeft  = $xmlFileLeft;
+        $this->_nameRight = $xmlFileRight;
+        $this->_fileLeft  = self::xml2array($xmlFileLeft);
+        $this->_fileRight = self::xml2array($xmlFileRight);
+    }
 
-        $tmpLeft   = file_get_contents($xmlFileLeft);
-        $tmpRight  = file_get_contents($xmlFileRight);
-        $this->_fileLeft = json_decode(json_encode(simplexml_load_string($tmpLeft)), true);
-        $this->_fileRight = json_decode(json_encode(simplexml_load_string($tmpRight)), true);
+
+    /**
+     * @brief 将xml转换成数组
+     * param string $strInputFile
+     * @return array $arrData
+     **/
+    public static function xml2array($strInput){
+
+        $tmpString  = file_get_contents($strInput);
+        $tmpArr     = json_decode(json_encode(simplexml_load_string($tmpString)), true);
+        $arrExplode = explode("<", $tmpString);
+        $arrCh = array(' ', '\n');
+        $rootTag    = substr(str_replace($arrCh, '', $arrExplode[1]), 0, -2);
+        if (is_array($tmpArr)){
+            $arrData = array(
+                $rootTag  => array(),
+            );
+            foreach($tmpArr as $key => $value){
+                $arrData[$rootTag][] = array(
+                    $key  => $value,
+                );
+            }
+            return $arrData;
+        }
+        return false;
     }
 
 
@@ -45,70 +74,23 @@ class DiffXML extends BaseDiff{
     }
 
 
-    /**
-     * @brief 递归比较两个数组的差异之处
-     * @param array $arrLeft
-     * @param array $arrRight
-     * @return mix
-     **/
-    public static function doDiff($arrLeft, $arrRight){
-
-        $bolLeftArr  = is_array($arrLeft);
-        $bolRightArr = is_array($arrRight);
-        if(!$bolLeftArr && !$bolRightArr){
-            return ($arrLeft == $arrRight);
-        }else if($bolLeftArr !== $bolRightArr){
-            return false;
-        }else{
-            if($arrLeft == $arrRight){
-                return true;
-            }
-            $arrKey = array();
-            $res = array();
-            $arrKeyLeft  = array_keys($arrLeft);
-            $arrKeyRight = array_keys($arrRight);
-            //计算两个json的key差集
-            $arrDiffLeft  = array_diff($arrKeyLeft, $arrKeyRight);
-            $arrDiffRight = array_diff($arrKeyRight, $arrKeyLeft);
-            //计算两个json的key交集
-            $arrInter = array_intersect($arrKeyLeft, $arrKeyRight);
-            //var_dump($arrInter);
-            foreach($arrInter as $key){
-                $retDiff = self::doDiff($arrLeft[$key], $arrRight[$key]);
-                //var_dump($retDiff);
-                if (false === $retDiff){
-                    $res[$key] = array(
-                        "left"  => $arrLeft[$key],
-                        "right" => $arrRight[$key],
-                    );
-                }else if(is_array($retDiff)){
-                    $res[$key] = $retDiff;
-                }
-            }
-            //var_dump($res);
-            foreach($arrDiffLeft as $key){
-                $res[$key] = array(
-                    "left"  => $arrLeft[$key],
-                    "right" => '',
-                );
-            }
-            foreach($arrDiffRight as $key){
-                $res[$key] = array(
-                    "left"  => '',
-                    "eight" => $arrRight[$key],
-                );
-            }
-            return $res;
-        }
-    }
-
-
     /*
      * @breif 打印两个XML文件的差异之处
      * @param none
      * @return none
      **/
     public function printf() {
-        var_dump($this->_res);
+
+        if (empty($this->_res)){
+            $strSummary = printf("there is no diff between %s and %si. \n", $this->_nameLeft, $this->_nameRight);
+            //echo $strSummary;
+            //Log::info($strSummary);
+        }else{
+            //$strSummary = sprintf("there are %d diff[s], next is the detail differences.\n", count($this->_res[0]));
+            //echo $strSummary;
+            //Log::info($strSummary);
+            $result = $this->_res[0];
+            var_dump($result);
+        }
     }
 }

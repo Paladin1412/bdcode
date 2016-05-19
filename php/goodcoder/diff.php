@@ -51,7 +51,7 @@ switch ($res['type']){
         Log::info("diff json end........\n");
         break;
     case 'xml':
-        $diffXML = new DiffXML($res['left'], $res['right']);
+        $diffXML = new DiffXML($res['left'], $res['right'], $res['outFile'], $res['encoding']);
         $diffXML->diff();
         $diffXML->printf();
         Log::info("diff xml end..........\n");
